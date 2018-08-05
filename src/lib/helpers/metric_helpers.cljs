@@ -1,13 +1,11 @@
-(ns lib.helpers.stuff
+(ns lib.helpers.metric-helpers
   (:require [lib.state :as s]
             [lib.calculation :as cal]))
 
 (defn str->float [value]
-  (if (nil? @value)
+  (if (nil? value)
     nil
-    (do
-      (swap! value #(js/parseFloat %))
-      value)))
+    (js/parseFloat value)))
 
 (defn set-state [result metric-name]
   (fn []

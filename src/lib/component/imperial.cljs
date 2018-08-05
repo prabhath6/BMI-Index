@@ -2,7 +2,7 @@
   (:require [reagent.core :as r]
             [lib.state :as s]
             [lib.calculation :as cal]
-            [lib.helpers.stuff :as helpers]))
+            [lib.helpers.metric-helpers :as helpers]))
 
 (defn imperial-component []
   (let [height (r/atom "71")

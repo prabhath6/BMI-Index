@@ -2,7 +2,7 @@
   (:require [reagent.core :as r]
             [lib.state :as s]
             [lib.calculation :as cal]
-            [lib.helpers.stuff :as helpers]))
+            [lib.helpers.metric-helpers :as helpers]))
 
 (defn metric-component []
   (let [height (r/atom "1.8")

@@ -3,13 +3,25 @@
             [lib.component.imperial :as imperial]
             [lib.component.metric :as metric]))
 
+(defn imperial-component [])
+
+(defn sample []
+  [:section.section
+   [:div.container
+    [metric/metric-component2]]])
+
+; (defn app-component []
+;   [:div
+;    [:div
+;     [metric/metric-component]
+;     [:br]
+;     [:div
+;      [imperial/imperial-component]
+;      [sample]]]])
+
 (defn app-component []
   [:div
-   [:div
-    [metric/metric-component]
-    [:br]
-    [:div
-     [imperial/imperial-component]]]])
+   [sample]])
 
 ;; Render functions
 (defn ^:private render []

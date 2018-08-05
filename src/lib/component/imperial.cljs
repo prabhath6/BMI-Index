@@ -8,8 +8,7 @@
   (let [height (r/atom "71")
         weight (r/atom "150")
         height-converted (helpers/str->float height)
-        weight-converted (helpers/str->float weight)
-        type-name "imperial"]
+        weight-converted (helpers/str->float weight)]
     (fn []
       [:div
        [:p "height: " [helpers/text-input-helper height-converted]]
@@ -19,6 +18,5 @@
        [helpers/button-helper
         @weight-converted
         @height-converted
-        type-name
         cal/bmi-in-imperial
         "imperial"]])))

@@ -1,0 +1,19 @@
+{
+    "name": "bmi-index",
+    "version": "1.0.0",
+    "description": "This is a BMI-Index calculator",
+    "private": true,
+    "scripts": {
+        "clean": "rm -rf target && rm -rf public/js",
+        "release": "shadow-cljs release app",
+        "dev": "shadow-cljs watch app"
+    },
+    "devDependencies": {
+        "shadow-cljs": "^2.3.30"
+    },
+    "dependencies": {
+        "create-react-class": "^15.6.3",
+        "react": "^16.3.2",
+        "react-dom": "^16.3.2"
+    }
+}

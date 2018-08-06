@@ -5,3 +5,4 @@
 (def imperial-result (r/atom ""))
 (def metric-bmi-index (r/atom nil))
 (def imperial-bmi-index (r/atom nil))
+(def bmi-index-color (r/atom ""))

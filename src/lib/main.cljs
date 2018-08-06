@@ -3,25 +3,15 @@
             [lib.component.imperial :as imperial]
             [lib.component.metric :as metric]))
 
-(defn imperial-component [])
-
-(defn sample []
-  [:section.section
-   [:div.container
-    [metric/metric-component2]]])
-
-; (defn app-component []
-;   [:div
-;    [:div
-;     [metric/metric-component]
-;     [:br]
-;     [:div
-;      [imperial/imperial-component]
-;      [sample]]]])
-
-(defn app-component []
+(defn app-component
+  "Final component of the BMI App"
+  []
   [:div
-   [sample]])
+   [:section.section
+    [:div.container
+     [:h1.title.is-1.has-text-centered "BMI Calculator"]
+     [metric/metric-component]
+     [imperial/imperial-component]]]])
 
 ;; Render functions
 (defn ^:private render []

@@ -23,16 +23,17 @@
     :esle (.toFixed (float (* (/ weight-pounds (* height-inches height-inches)) 703)) 2)))
 
 (defn get-bmi-category
+  "Returns BMI category and css class for the category."
   [bmi]
   (if (nil? bmi)
     nil
     (do
       (cond
-        (< bmi 15.0) "Very severely underweight"
-        (and (>= bmi 15) (< bmi 16)) "Severely underweight"
-        (and (>= bmi 16) (< bmi 18.5)) "Under weight"
-        (and (>= bmi 18.5) (< bmi 25)) "Normal"
-        (and (>= bmi 25) (< bmi 30)) "Over weight"
-        (and (>= bmi 30) (< bmi 35)) "Moderately obese"
-        (and (>= bmi 35) (< bmi 40)) "Severely obese"
-        (>= bmi 40) "Very severely obese"))))
+        (< bmi 15.0) ["Very severely underweight" "is-warning"]
+        (and (>= bmi 15) (< bmi 16)) ["Severely underweight" "is-warning"]
+        (and (>= bmi 16) (< bmi 18.5)) ["Under weight" "is-warning"]
+        (and (>= bmi 18.5) (< bmi 25)) ["Normal" "is-success"]
+        (and (>= bmi 25) (< bmi 30)) ["Over weight" "is-danger"]
+        (and (>= bmi 30) (< bmi 35)) ["Moderately obese" "is-danger"]
+        (and (>= bmi 35) (< bmi 40)) ["Severely obese" "is-danger"]
+        (>= bmi 40) ["Very severely obese" "is-danger"]))))
